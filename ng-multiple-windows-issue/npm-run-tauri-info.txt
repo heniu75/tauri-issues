@@ -1,0 +1,49 @@
+
+> example-app@0.0.0 tauri C:\code\gh\tauri-issues\ng-multiple-windows-issue
+> tauri "info"
+
+
+Operating System - Windows, version 10.0.19044 X64
+Webview2 - 99.0.1150.36
+Visual Studio Build Tools:
+   - Visual Studio Professional 2019
+   - Visual Studio Professional 2022
+
+Node.js environment
+  Node.js - 14.18.3
+  @tauri-apps/cli - 1.0.0-rc.6 (outdated, latest: 1.0.0-rc.7)
+  @tauri-apps/api - 1.0.0-rc.2
+
+Global packages
+  npm - 6.14.15
+  pnpm - Not installed
+  yarn - Not installed
+
+Rust environment
+  rustup - 1.24.3
+  rustc - 1.59.0
+  cargo - 1.59.0
+  toolchain - stable-x86_64-pc-windows-msvc 
+
+App directory structure
+/.angular
+/.idea
+/.vscode
+/dist
+/node_modules
+/scripts
+/src
+/src-node
+/src-tauri
+
+App
+  tauri - 1.0.0-rc.4
+  tauri-build - 1.0.0-rc.4
+  tao - 0.6.4
+  wry - 0.13.3
+  build-type - bundle
+  CSP - unset
+  distDir - ../dist/example-app
+  devPath - http://localhost:4200/
+  framework - Angular
+  bundler - Webpack

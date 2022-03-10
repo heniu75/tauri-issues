@@ -16,13 +16,13 @@ struct Payload {
 fn main() {
   tauri::Builder::default()
     .setup(|app| {
-      println!("Setting up the app...");
-      let window = app.get_window("main").unwrap();
-      window.open_devtools();
+      //println!("Setting up the app...");
+      //let window = app.get_window("main").unwrap();
+      //window.open_devtools();
 
-      let id = app.listen_global("messageForRustServer", |event| {
-        println!("got messageForRustServer with payload {:?}", event.payload());
-      });
+      //let id = app.listen_global("messageForRustServer", |event| {
+        //println!("got messageForRustServer with payload {:?}", event.payload());
+      //});
 
       // unlisten to the event using the `id` returned on the `listen_global` function
       // an `once_global` API is also exposed on the `App` struct
@@ -30,10 +30,10 @@ fn main() {
 
       // create_child_process(window);
       tauri::async_runtime::spawn(async move {
-        let (mut receiver, mut child) = Command::new_sidecar("app")
+        let (receiver, child) = Command::new_sidecar("app")
           .expect("failed to setup `app` sidecar")
           .spawn()
-          .expect("Failed to spawn packaged node");
+          .expect("Failed to spawn packaged node app");
 
 //         let mut i = 0;
 //         while let Some(event) = receiver.recv().await {
